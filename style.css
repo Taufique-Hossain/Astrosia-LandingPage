@@ -232,7 +232,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7rem auto;
+    margin: 5rem auto;
     gap: 2rem;
     padding: 0.6rem;
 }
@@ -241,19 +241,19 @@ body {
     /* display: flex;
     flex-direction: column; */
     text-align: center;
-    animation: slideFromLeft 1.2s ease-out forwards;
+    animation: slideFromBottom 0.5s ease-in forwards;
     opacity: 0;
 }
 
-@keyframes slideFromLeft {
+@keyframes slideFromBottom {
     0% {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateY(30%);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
