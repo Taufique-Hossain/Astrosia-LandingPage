@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --background-color: #000;
+    --light-grey: rgb(255, 255, 255);
+    --dark-light-grey: rgb(171, 171, 171);
+    --medium-light-grey: rgb(214, 214, 214);
+    --primary-color: rgb(46, 165, 96);
+    --gradient-color: linear-gradient(126.19095104648488deg, #1e822b 0%, rgba(52, 191, 112, 1) 85.4315459728241%, rgba(0, 255, 151, 1) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    background-color: var(--background-color);
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    max-width: 1280px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0.1rem 0.7rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--dark-light-grey);
+    font-weight: 400;
+    font-size: 0.93rem;
+}
+
+.logo-text-1 {
+    margin-left: 2.69rem;
+}
+
+.logo-icon {
+    height: 2.2rem;
+    width: 20.938rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 2rem;
+}
+
+
+
+.nav-link {
+    color: var(--medium-light-grey);
+    font-size: 1rem;
+    position: relative;
+    transition: all;
+    font-weight: 600;
+}
+
+.nav-link::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    color: var(--light-grey);
+    font-size: 1.1rem;
+}
+
+.get-started {
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--light-grey);
+    transition: all 0.2s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.get-started:hover {
+    background-color: #1d9c2e;
+}
+
+
+
+@media screen and (max-width:990px) {
+    .logo-icon {
+        height: 1.5rem;
+        width: 13.938rem;
+    }
+
+    .logo {
+        font-size: 0.89rem;
+    }
+
+    .logo-text-1 {
+        margin-left: 1.7rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .logo-icon {
+        height: 2.2rem;
+        width: 20.938rem;
+    }
+
+    .logo {
+        font-size: 0.93rem;
+    }
+
+    .logo-text-1 {
+        margin-left: 2.69rem;
+    }
+}
+
+@media screen and (max-width:505px) {
+    .logo-icon {
+        height: 1.5rem;
+        width: 13.938rem;
+    }
+
+    .logo {
+        font-size: 0.89rem;
+    }
+
+    .logo-text-1 {
+        margin-left: 1.7rem;
+    }
+
+    .header-content {
+        padding: 0.1rem 1.2rem;
+    }
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--background-color);
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width:800px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-button.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-button.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-bar {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        z-index: 999;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.374);
+        width: 100%;
+        height: 100%;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-link{
+        background-color: transparent;
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        margin: 16px 0;
+    }
+
+    .get-started {
+        display: none;
+    }
+
+    .nav-bar.active {
+        left: 0;
+    }
+}
+
+.main-section {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7rem auto;
+    gap: 2rem;
+    padding: 0.6rem;
+}
+
+.content-top {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: slideFromLeft 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content-top-text1 {
+    font-size: 5.83rem;
+    font-weight: bolder;
+    color: var(--dark-light-grey);
+}
+
+.content-top-text2 {
+    font-size: 5.83rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.section-top-description {
+    color: var(--medium-light-grey);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get-started-1 {
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--light-grey);
+    transition: all 0.2s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.get-started-1:hover {
+    background-color: #1d9c2e;
+}
+
+.section-image {
+    height: 100%;
+    width: 100%;
+}
+
+.image-container {
+    height: 50vh;
+    overflow: hidden;
+    border: none;
+    border-radius: 1.225rem;
+}
+
+@media screen and (max-width:800px) {
+    .content-top {
+        display: block;
+    }
+
+    .content-top-text1 {
+        font-size: 3.83rem;
+    }
+
+    .content-top-text2 {
+        font-size: 3.83rem;
+    }
+    .main-section{
+        margin: 1rem auto;
+    }
+    .section-top-description{
+        font-size: 1.5rem;
+    }
+}
