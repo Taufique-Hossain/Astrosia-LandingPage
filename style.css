@@ -209,7 +209,7 @@ body {
         transition: 0.3s;
     }
 
-    .nav-link{
+    .nav-link {
         background-color: transparent;
         font-size: 1.5rem;
     }
@@ -238,8 +238,8 @@ body {
 }
 
 .content-top {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     text-align: center;
     animation: slideFromLeft 1.2s ease-out forwards;
     opacity: 0;
@@ -266,7 +266,10 @@ body {
 .content-top-text2 {
     font-size: 5.83rem;
     font-weight: 600;
-    color: var(--primary-color);
+    background: linear-gradient(90deg, #ff6b6b, #f06595, #cc5de8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .section-top-description {
@@ -320,10 +323,12 @@ body {
     .content-top-text2 {
         font-size: 3.83rem;
     }
-    .main-section{
+
+    .main-section {
         margin: 1rem auto;
     }
-    .section-top-description{
+
+    .section-top-description {
         font-size: 1.5rem;
     }
 }
