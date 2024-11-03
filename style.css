@@ -92,7 +92,7 @@ body {
 .get-started {
     border: none;
     border-radius: 0.375rem;
-    background-color: var(--primary-color);
+    background: linear-gradient(90deg, #ff6b6b, #f06595, #cc5de8);
     color: var(--light-grey);
     transition: all 0.2s;
     padding: 0.75rem 1.5rem;
@@ -101,10 +101,8 @@ body {
 }
 
 .get-started:hover {
-    background-color: #1d9c2e;
+    background: linear-gradient(90deg, #cc5de8, #f06595, #ff6b6b);
 }
-
-
 
 @media screen and (max-width:990px) {
     .logo-icon {
@@ -248,7 +246,7 @@ body {
 @keyframes slideFromBottom {
     0% {
         opacity: 0;
-        transform: translateY(30%);
+        transform: translateY(33%);
     }
 
     100% {
@@ -274,10 +272,17 @@ body {
 
 .section-top-description {
     color: var(--medium-light-grey);
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     padding: 1rem 0;
 }
 
+.auto-type{
+    background: linear-gradient(90deg, #ff6b6b, #f06595, #cc5de8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.8rem;
+}
 .button-group {
     display: flex;
     align-items: center;
@@ -287,7 +292,7 @@ body {
 .get-started-1 {
     border: none;
     border-radius: 0.375rem;
-    background-color: var(--primary-color);
+    background: linear-gradient(90deg, #ff6b6b, #f06595, #cc5de8);
     color: var(--light-grey);
     transition: all 0.2s;
     padding: 0.75rem 1.5rem;
@@ -296,7 +301,7 @@ body {
 }
 
 .get-started-1:hover {
-    background-color: #1d9c2e;
+    background: linear-gradient(90deg, #cc5de8, #f06595, #ff6b6b);
 }
 
 .section-image {
@@ -317,11 +322,11 @@ body {
     }
 
     .content-top-text1 {
-        font-size: 3.83rem;
+        font-size: 3.53rem;
     }
 
     .content-top-text2 {
-        font-size: 3.83rem;
+        font-size: 3.53rem;
     }
 
     .main-section {
@@ -329,6 +334,9 @@ body {
     }
 
     .section-top-description {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
+    }
+    .auto-type{
+        font-size: 2.2rem;
     }
 }
